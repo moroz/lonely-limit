@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   astro: ^2.0.15
+  hamburgers: ^1.2.1
   prettier: ^2.8.4
   prettier-plugin-astro: ^0.8.0
   prettier-plugin-svelte: ^2.9.0
@@ -10,6 +11,7 @@ specifiers:
 
 dependencies:
   astro: 2.0.15_sass@1.58.3
+  hamburgers: 1.2.1
   sass: 1.58.3
   svelte: 3.55.1
 
@@ -1325,6 +1327,10 @@ packages:
       kind-of: 6.0.3
       section-matter: 1.0.0
       strip-bom-string: 1.0.0
+    dev: false
+
+  /hamburgers/1.2.1:
+    resolution: {integrity: sha512-uFuVVF7/MeUtRWrA+S1FGGo4iVi7RgPzZAmljBnSeDh4snOZzaQ+oB6CI1m4vKD5RGz9s70ufgiJLxgivqA26Q==}
     dev: false
 
   /has-flag/3.0.0:

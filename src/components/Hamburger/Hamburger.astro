@@ -1,0 +1,30 @@
+---
+import "./hamburger.scss";
+---
+
+<button class="hamburger hamburger--spin" type="button" id="hamburger">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+
+<script>
+  function setUpHamburgerEffect() {
+    const button = document.querySelector("button#hamburger");
+    button?.addEventListener("click", () => {
+      button.classList.toggle("is-active");
+    });
+  }
+
+  setUpHamburgerEffect();
+</script>
+
+<style lang="scss">
+  @import "@styles/variables.sass";
+
+  #hamburger {
+    @include not-mobile {
+      display: none;
+    }
+  }
+</style>

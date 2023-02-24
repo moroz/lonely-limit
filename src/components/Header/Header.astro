@@ -1,15 +1,31 @@
 ---
 import styles from "./Header.module.sass";
 import Logo from "@components/Logo/Logo.astro";
+import Hamburger from "@components/Hamburger/Hamburger.astro";
 ---
 
 <header class={styles.root}>
+  <Hamburger />
   <div class={styles.container}>
-    <h1>
-      Bartołty Wielkie
-      <br />
-      Buddyjski Ośrodek Odosobnieniowy
+    <h1 class="title">
+      <span class="header-mobile">Bartołty Wielkie</span>
+      <span class="header-desktop">Buddyjski Ośrodek Odosobnieniowy</span>
     </h1>
     <Logo />
   </div>
 </header>
+
+<style lang="scss">
+  @import "@styles/variables.sass";
+
+  .title {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-desktop {
+    @include mobile {
+      display: none;
+    }
+  }
+</style>
