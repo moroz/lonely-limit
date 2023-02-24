@@ -1,0 +1,13 @@
+---
+export interface Props {
+  title: string;
+}
+
+import Document from "./Document.astro";
+
+const { title } = Astro.props;
+---
+
+<Document title={title}>
+  <slot />
+</Document>
