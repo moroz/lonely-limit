@@ -4,10 +4,17 @@ export interface Props {
 }
 
 import Document from "./Document.astro";
+import Header from "@components/Header/Header.astro";
+import styles from "./Layout.module.sass";
 
 const { title } = Astro.props;
 ---
 
 <Document title={title}>
-  <slot />
+  <div class={styles.layout}>
+    <Header />
+    <main>
+      <slot />
+    </main>
+  </div>
 </Document>

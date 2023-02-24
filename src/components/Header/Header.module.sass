@@ -1,0 +1,93 @@
+@import @styles/variables
+
+.root
+  height: $header-height
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  transition: background .2s ease-in-out
+  +mobile
+    border-bottom: 1px solid var(--primary)
+
+  h1
+    font-size: 1rem
+    margin: 0
+    color: var(--primary)
+
+.mobileTitle
+  font-size: 1.2em
+  +not-mobile
+    display: none
+
+.desktopTitle
+  +mobile
+    display: none
+
+.open
+  transition: none
+
+.opaque, .open
+  background: var(--surface-1dp)
+
+.container
+  display: flex
+  +not-mobile
+    margin: 0 $header-side-padding
+    justify-content: space-between
+  +mobile
+    flex-direction: row-reverse
+    justify-content: flex-end
+    gap: 1rem
+    margin-left: 1.5rem
+  height: 100%
+  align-items: center
+
+.logo
+  position: relative
+  +mobile
+    img, svg
+      height: .7 * $header-height
+      width: auto
+
+  +not-mobile
+    transform: translateY(1.2rem)
+
+    &::before, &::after
+      content: ''
+      display: block
+      height: 1px
+      background: var(--primary)
+      bottom: .8rem
+      position: absolute
+
+  &::before
+    left: $header-side-padding
+    transform: translateX(-100%)
+    width: 100vw
+
+  &::after
+    right: -.5rem
+    background: var(--primary)
+    width: $header-side-padding
+    transform: translateX(100%)
+
+.hamburger
+  +not-mobile
+    display: none
+
+  position: absolute
+  right: 0
+  bottom: 0
+  top: 0
+  height: var(--header-height)
+  width: var(--header-height)
+  display: flex
+  align-items: center
+  justify-content: center
+  color: var(--primary)
+
+
+.logoImg
+  width: auto
+  height: auto

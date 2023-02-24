@@ -1,0 +1,26 @@
+@import @styles/variables
+
+.layout
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+
+  main
+    line-height: 1.6
+    font-size: 1.05em
+    width: $content-width
+    margin: 0 auto
+    padding-top: calc(var(--header-total-height) + .5rem)
+    padding-bottom: 1.5rem
+    flex: 1
+
+    h2:first-child
+      margin-top: .5em
+
+    +mobile
+      width: 100%
+      padding-right: 1.5rem
+      padding-left: 1.5rem
+
+      
+

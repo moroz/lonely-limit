@@ -1,0 +1,19 @@
+---
+import React from "react";
+import styles from "./Logo.module.sass";
+import clsx from "clsx";
+import Link from "next/link";
+import LogoText from "./logo-text.svg?raw";
+import LogoImg from "./favicon.svg";
+---
+
+<div class={styles.logo}>
+  <div set:html={LogoText} />
+  <a href="/">
+    <img
+      class={styles.logoImg}
+      src={LogoImg}
+      alt="Logo Buddyjskiego Związku Diamentowej Drogi"
+    />
+  </a>
+</div>
