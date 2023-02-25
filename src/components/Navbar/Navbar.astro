@@ -1,0 +1,9 @@
+---
+import { NavbarConfig } from "../../config";
+import styles from "./Navbar.module.sass";
+const config = NavbarConfig.pl;
+---
+
+<nav class={styles.navbar}>
+  {config.map((item, i) => <a href={item.href}>{item.label}</a>)}
+</nav>

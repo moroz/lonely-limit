@@ -1,0 +1,42 @@
+@import ../../styles/_variables.sass
+
+.navbar
+  display: flex
+  transition: background .2s ease-in-out
+
+  &.opaque
+    background: var(--surface-1dp)
+
+  +not-mobile
+    height: $navbar-height
+    align-items: center
+    justify-content: center
+
+  a
+    height: $navbar-height
+    line-height: $navbar-height
+    padding: 0 $navbar-item-side-padding
+    font-weight: 600
+
+    &:link, &:visited
+      color: var(--emphasis-color)
+
+    &:hover
+      background: var(--surface-1dp)
+      transition: .15s ease-in-out
+
+  +mobile
+    &:not(.open)
+      display: none
+
+    flex-direction: column
+    position: fixed
+    top: var(--header-height)
+    right: 0
+    left: 0
+    text-align: center
+    background: var(--surface-1dp)
+
+    a
+      display: block
+      margin: .25rem .5rem

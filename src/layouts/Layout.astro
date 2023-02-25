@@ -7,13 +7,14 @@ import Document from "./Document.astro";
 import Header from "@components/Header/Header.astro";
 import styles from "./Layout.module.sass";
 
-const { title } = Astro.props;
+const title = Astro.props?.title ?? Astro.props?.frontmatter.title;
 ---
 
 <Document title={title}>
   <div class={styles.layout}>
     <Header />
     <main>
+      <h2>{title}</h2>
       <slot />
     </main>
   </div>

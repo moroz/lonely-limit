@@ -2,6 +2,7 @@
 import styles from "./Header.module.sass";
 import Logo from "@components/Logo/Logo.astro";
 import Hamburger from "@components/Hamburger/Hamburger.astro";
+import Navbar from "@components/Navbar/Navbar.astro";
 ---
 
 <header class={styles.root}>
@@ -13,6 +14,7 @@ import Hamburger from "@components/Hamburger/Hamburger.astro";
     </h1>
     <Logo />
   </div>
+  <Navbar />
 </header>
 
 <style lang="scss">
